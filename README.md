@@ -36,3 +36,49 @@ system that bridges governance and financial markets.
 This project redefines futarchy governance by embedding long-term
 alignment into every decision, empowering DAOs to make sustainable
 choices while fostering innovation in decentralized finance.
+
+# Current status
+
+```
+$ docker compose up -d
+[+] Running 2/2
+ ✔ Container futurodao-validator-1  Started                                                                      0.4s 
+ ✔ Container futurodao-builder-1    Started                                                                      0.4s 
+
+$ docker compose run builder bash
+
+hostuser@fd8d3ac013b3:/project$ solana config get
+Config File: /home/hostuser/.config/solana/cli/config.yml
+RPC URL: http://validator:8899 
+WebSocket URL: ws://validator:8900/ (computed)
+Keypair Path: /home/hostuser/.config/solana/my-keypair.json 
+Commitment: confirmed 
+
+hostuser@fd8d3ac013b3:/project$ solana balance
+0 SOL
+
+hostuser@fd8d3ac013b3:/project$ solana airdrop 10
+Requesting airdrop of 10 SOL
+
+Signature: 3q8tXkRTayYjRKy8pKH3UJAoiJRASWf14J3Mh9YZ2MFcXvUqWPqXPxyHGf4HstAJusCZkwXBUmuFpkUJW76287gG
+
+10 SOL
+
+hostuser@fd8d3ac013b3:/project$ solana balance
+10 SOL
+
+hostuser@fd8d3ac013b3:/project$ solana ping
+[...]
+1 lamport(s) transferred: seq=0   time= 200ms signature=24WPg39RvCcafVWMjrX8d1Rmxg5YYXvBLRatxCHvXvxRtP66VVvn7jwZmms8SEjnUrqKjRyM62RfgR27QpuDwyYm
+2 lamport(s) transferred: seq=1   time= 401ms signature=3h19snm8fnp26j8ajxGRjwAdHvqiPvtTkBfSkeeG6XNJQSbBtYenQFca1ct4ucXo4LyPUGKYCVdUFF8euvwi1kZg
+3 lamport(s) transferred: seq=2   time= 401ms signature=wH35bTF8CiSE8XEwBpS9CBf2xNsLRBZJ7DoYGeBf7zuMGVAZ2ja6xz7sCugHGJwXRE1HtprfZshCopX3KCy5bWo
+
+--- transaction statistics ---
+3 transactions submitted, 3 transactions confirmed, 0.0% transaction loss
+confirmation min/mean/max/stddev = 200/334/401/116 ms
+
+hostuser@fd8d3ac013b3:/project$ solana balance
+9.999985 SOL
+hostuser@fd8d3ac013b3:/project$ 
+exit
+```
