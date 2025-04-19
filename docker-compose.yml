@@ -1,0 +1,30 @@
+services:
+  validator:
+    image: tchambard/solana-test-validator:latest
+    entrypoint: solana-test-validator
+    command: ["--ledger", "/ledger", "-r", "--bind-address", "0.0.0.0", "--rpc-port", "8899"]
+    ports:
+      - "8899:8899"
+      - "8900:8900"
+      - "8003:8003"
+    volumes:
+      - ./solana-ledger:/ledger
+    networks:
+      - solana-net
+
+  builder:
+    image: solana-build:1.18.15-a0.30.0
+    command: ["tail", "-f", "/dev/null"]
+    environment:
+      - SOLANA_URL=http://validator:8899
+    volumes:
+      - ./:/code
+      - ./target:/code/target
+      - ./my-solana-wallet:/home/hostuser/.config/solana
+    networks:
+      - solana-net
+    entrypoint: []
+
+networks:
+  solana-net:
+    driver: bridge
