@@ -30,7 +30,7 @@ bridges governance and financial markets.
 
 - Long-Term Incentives: Binary options ensure participants remain invested in the DAO's performance for up to 1 year, discouraging short-term token dumping.
 - Market-Driven Accountability: Proposal outcomes are tied to real-world price movements, encouraging informed decision-making and reducing manipulation risks.
-- Cross-Protocol Integration: Combines futarchy governance framework with Tru3Bliss prediction markets and Pyth's decentralized price oracles for robust functionality.
+- Cross-Protocol Integration: Combines futarchy governance framework with prediction and options markets, and Pyth's decentralized price oracles for robust functionality.
 - User-Friendly Interface: A unified dashboard displays proposals, markets, and option performance, making complex financial instruments accessible to DAO participants.
 
 This project redefines futarchy governance by embedding long-term
