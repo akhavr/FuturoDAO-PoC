@@ -36,7 +36,3 @@ bridges governance and financial markets.
 This project redefines futarchy governance by embedding long-term
 alignment into every decision, empowering DAOs to make sustainable
 choices while fostering innovation in decentralized finance.
-
-# Current status
-
-See [Change Log](./ChangeLog.md)
