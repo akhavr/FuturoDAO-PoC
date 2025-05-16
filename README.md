@@ -22,8 +22,8 @@ European-style binary options with a 1-year expiry and a predefined
 strike price (e.g., +50% from the current TWAP).  These options
 incentivize participants to align their decisions with long-term
 protocol growth, as the value of their options depends on the DAO's
-future success.  By integrating Tru3Bliss prediction infrastructure
-and Pyth Network's price feeds, we create a seamless system that
+future success.  By creating prediction market infrastructure
+and Pyth Network's price feeds, we introduce a seamless system that
 bridges governance and financial markets.
 
 # Distinct Features
